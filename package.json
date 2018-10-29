@@ -1,0 +1,11 @@
+{
+  "name": "wangchuang.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/GuYan-No1/wangchuang.github.io.git",
+  "author": "王闯 <865748877@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "watchman": "^1.0.0"
+  }
+}
