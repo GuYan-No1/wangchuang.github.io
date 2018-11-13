@@ -4,16 +4,5 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GuYan-No1/wangchuang.github.io.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/GuYan-No1/wangchuang.github.io/issues"
-  },
-  "homepage": "https://github.com/GuYan-No1/wangchuang.github.io#readme"
+  }
 }
