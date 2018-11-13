@@ -4,5 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint .",
+    "fix": "eslint --fix"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "pre-commit": "^1.2.2"
+  },
+  "dependencies": {
+    "babel-eslint": "^10.0.1"
   }
 }
