@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>王闯</title>
+    <title>Blog</title>
+    <style>
+      #canvas{
+        background: #000;
+      }
+    </style>
 </head>
 <body>
-    <div>王闯</div>
+    <canvas id="canvas" width="400" height="400"></canvas>
 </body>
+<script>
+  const canvas = document.getElementById('canvas');
+  const context = canvas.getContext('2d');
+  context.beginPath();
+  context.arc(100,100,50,0,Math.PI/2,false);
+  context.closePath();
+  //context.fillStyle = 'rgb(255,255,255)';
+  //context.fill();
+  context.strokeStyle = 'rgb(255,255,255)';
+  context.stroke();
+</script>
 </html>
