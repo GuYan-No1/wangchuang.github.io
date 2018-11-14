@@ -7,7 +7,7 @@
     <title>Blog</title>
     <style>
       #canvas{
-        background: #000;
+        background: lightskyblue;
       }
     </style>
 </head>
@@ -16,14 +16,70 @@
     <div>王闯</div>
 </body>
 <script>
+  /*
+   绘制canvas流程
+      1.起始一个路径
+      2.定义绘制路线
+      3.结束绘制
+      4.定义路径填充方式
+      5.填充
+  */
   const canvas = document.getElementById('canvas');
   const context = canvas.getContext('2d');
+
+  /*
+    beginPath()方法起始一条路径，或重置当前路径
+  */
   context.beginPath();
-  context.arc(100,100,50,0,Math.PI/2,false);
+
+  /*
+   context.arc(100,100,50,0,Math.PI/2,false);
+
+     arc()方法-->创建弧/曲线（用于创建圆或部分圆）
+     arc(x,y,r,sAngle,eAngle,counterclockwise)
+        x--->圆心x坐标
+        y--->圆心y坐标
+        r--->半径
+        sAngle--->起点角度（规定3点钟方向为0度）
+        eAngle--->终点角度
+        counterclockwise--->定义顺逆时针(false顺,true逆),默认为顺时针
+  */
+
+   /*
+      moveTo(x,y)--->把路径移动到指定点,不创建线条
+      lineTo(x,y)--->添加一个新的点,然后绘制一条从该点到moveTo(x,y)指定点的直线
+        注: 1.如果没有moveTo(x,y),那么就把第一次lineTo(x,y)的点作为moveTo(x,y)指定的点
+            2.每次lineTo(x,y)后如果没有moveTo(x,y),那么就把这次lineTo(x,y)最为下次lineTo(x,y)的起始点
+   */
+  context.moveTo(50,50);
+  context.lineTo(100,100);
+  context.moveTo(70,70);
+  context.lineTo(200,100);
+
+
+  /*
+    closePath() 结束一条路径
+  */
   context.closePath();
-  //context.fillStyle = 'rgb(255,255,255)';
-  //context.fill();
-  context.strokeStyle = 'rgb(255,255,255)';
+
+  /*
+    fillStyle属性--->定义填充方式
+    fill()方法--->填充
+
+    strokeStyle属性--->定义描边方式
+    stroke--->描边
+
+    线条的相关属性
+        lineCap属性--->设置或返回线条的结束端点样式
+        lineJoin--->设置或返回两条线相交时，所创建的拐角类型
+        lineWidth--->设置或返回当前的线条宽度
+        miterLimit--->设置或返回最大斜接长度
+  */
+  // context.fillStyle = 'rgb(0,0,0)';
+  // context.fill();
+  context.lineCap='round';
+  context.lineWidth='10';
+  context.strokeStyle='#fff';
   context.stroke();
 </script>
 </html>
