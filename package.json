@@ -4,16 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint .",
-    "fix": "eslint --fix"
+    "lint": "eslint src --ext .js --cache --fix"
   },
-  "pre-commit":[
-      "fix",
-      "lint"
-    ],
+  "pre-commit": [
+    "lint"
+  ],
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "^5.9.0",
+    "eslint-plugin-html": "^5.0.0",
+    "eslint-plugin-react": "^7.11.1",
     "pre-commit": "^1.2.2"
   }
 }
